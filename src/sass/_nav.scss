@@ -3,8 +3,8 @@
 .nav {
 	position: sticky;
 	top: 0;
-	padding: 1em;
-	font-size: 3.2rem;
+	padding: 1.5rem;
+	font-size: 2.2rem;
 	z-index: 10;
 	background-color: color.$main-color;
 	overflow: hidden;
@@ -15,18 +15,18 @@
 	}
 
 	&__brand {
-		padding: 0.5em;
+		padding: 1rem;
 		i {
 			color: color.$icon-color;
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 	}
 
 	.burger-btn {
 		position: fixed;
-		top: 10px;
-		right: 10px;
-		padding: 1em;
+		top: 0px;
+		right: 0px;
+		padding: 2rem;
 		background: none;
 		border: 1px solid transparent;
 		cursor: pointer;
@@ -41,7 +41,7 @@
 		&__box {
 			position: relative;
 			height: 30px;
-			width: 40px;
+			width: 30px;
 		}
 
 		&__bars,
@@ -59,12 +59,12 @@
 			width: 100%;
 
 			&::after {
-				top: 12px;
+				top: 10px;
 				width: 60%;
 			}
 
 			&::before {
-				top: 25px;
+				top: 20px;
 				width: 30%;
 			}
 		}
@@ -127,11 +127,35 @@
 	}
 }
 
+@media (min-width: 414px) {
+	.nav {
+		padding: 1.5rem;
+		font-size: 2.8rem;
+
+		&__brand {
+			i {
+				font-size: 3.4rem;
+			}
+		}
+		.burger-btn {
+			&__box {
+				height: 30px;
+				width: 40px;
+			}
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	.nav {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		font-size: 3.8rem;
+
+		&__brand{
+			font-size: 4rem;
+		}
 
 		.burger-btn {
 			display: none;
