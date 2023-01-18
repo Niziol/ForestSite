@@ -1,0 +1,157 @@
+@use 'colors' as color;
+
+.nav {
+	position: sticky;
+	top: 0;
+	padding: 1em;
+	font-size: 3.2rem;
+	z-index: 10;
+	background-color: color.$main-color;
+	overflow: hidden;
+
+	a {
+		text-decoration: none;
+		color: color.$second-color;
+	}
+
+	&__brand {
+		padding: 0.5em;
+		i {
+			color: color.$icon-color;
+			font-size: 4rem;
+		}
+	}
+
+	.burger-btn {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+
+		&:focus {
+			outline: none;
+			border: 1px solid rgba (255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+
+		&__box {
+			position: relative;
+			height: 30px;
+			width: 40px;
+		}
+
+		&__bars,
+		&__bars::after,
+		&__bars::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			height: 4px;
+			background-color: color.$second-color;
+			transition: width 0.3s;
+		}
+
+		&__bars {
+			width: 100%;
+
+			&::after {
+				top: 12px;
+				width: 60%;
+			}
+
+			&::before {
+				top: 25px;
+				width: 30%;
+			}
+		}
+
+		&:hover {
+			.burger-btn__bars::after,
+			.burger-btn__bars::before {
+				width: 100%;
+			}
+		}
+	}
+
+	.nav-mobile {
+		position: fixed;
+		top: 0;
+		right: -110%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-color: color.$main-color;
+		transition: right 0.3s;
+
+		overflow: hidden;
+		z-index: 100;
+
+		&--active {
+			right: 0;
+		}
+
+		.nav__items {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.nav__item {
+				position: relative;
+				margin: 0.5em 2em;
+				padding: 0.7em 2em;
+				color: color.$second-color;
+
+				&::before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					bottom: 0;
+					left: 0;
+					background-color: color.$second-color;
+					transform: scaleX(0);
+					transition: transform 0.3s;
+				}
+
+				&:hover::before {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.burger-btn {
+			display: none;
+		}
+
+		.nav-desktop {
+			display: block;
+			font-size: 1.8rem;
+
+			.nav__items {
+				a {
+					padding: 3.5em 2.2em;
+					transition: background-color 0.3s, color 0.3s;
+
+					&:hover {
+						background-color: color.$second-color;
+						color: color.$main-color;
+					}
+				}
+			}
+		}
+	}
+}
