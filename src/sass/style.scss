@@ -19,8 +19,7 @@ html {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.6rem;
+	font-family: 'Raleway', sans-serif;
 	background-color: color.$main-color;
 	color: color.$second-color;
 }
@@ -28,14 +27,37 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1400px;
+}
+
+.section-heading {
+	position: relative;
+	margin-bottom: 1em;
+	font-size: 3rem;
+	font-weight: 200;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section-padding {
+	padding: 4em 2em;
 }
 
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
+	.section-heading {
+		font-size: 4rem;
+	}
+
+	.section-padding {
+		padding: 6em 2em;
+	}
 }
 @media (min-width: 992px) {
+	.section-heading {
+		font-size: 4.6rem;
+	}
 }
 @media (min-width: 1100px) {
 }
