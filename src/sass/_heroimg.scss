@@ -1,0 +1,58 @@
+@use 'colors' as color;
+@use 'mixins' as mixin;
+
+.hero-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	width: 100%;
+	color: color.$main-color;
+
+	@include mixin.heroImages('../../dist/img/girl-5785590_640.jpg');
+
+	&__title {
+		padding: 1rem 4rem;
+		font-size: 2.5rem;
+		font-weight: 600;
+		border: 1px solid color.$main-color;
+		text-align: center;
+	}
+}
+
+@media (min-width: 414px) {
+	.hero-img {
+		height: 250px;
+
+		&__title {
+			font-size: 3rem;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.hero-img {
+		height: 400px;
+
+		&__title {
+			padding: 3rem 8rem;
+			font-size: 4rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.hero-img {
+		@include mixin.heroImages('../../dist/img/girl-5785590_1920.jpg');
+
+		&__title {
+			padding: 4rem 12rem;
+			font-size: 5rem;
+		}
+	}
+}
+@media (min-width: 1100px) {
+	.hero-img {
+		&__title {
+			padding: 4rem 20rem;
+		}
+	}
+}
