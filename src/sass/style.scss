@@ -24,6 +24,12 @@ body {
 	color: color.$second-color;
 }
 
+button,
+input,
+textarea {
+	font-family: inherit;
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -31,7 +37,6 @@ body {
 }
 
 .section-heading {
-	position: relative;
 	margin-bottom: 1em;
 	font-size: 3rem;
 	font-weight: 200;
@@ -43,6 +48,12 @@ body {
 	padding: 4em 2em;
 }
 
+.section-description {
+	font-size: 2rem;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
@@ -52,6 +63,10 @@ body {
 
 	.section-padding {
 		padding: 6em 2em;
+	}
+
+	.section-description {
+		font-size: 2.5rem;
 	}
 }
 @media (min-width: 992px) {
