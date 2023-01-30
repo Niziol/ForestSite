@@ -44,6 +44,8 @@
 			position: relative;
 			font-size: 1rem;
 			padding: 0.5em 0;
+			text-decoration: none;
+			color: color.$second-color;
 			cursor: pointer;
 
 			&::before {
