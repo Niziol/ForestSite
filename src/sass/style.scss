@@ -16,6 +16,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
 }
 
 body {
@@ -70,6 +71,10 @@ textarea {
 	}
 }
 @media (min-width: 992px) {
+	html {
+		scroll-padding-top: 90px;
+	}
+
 	.section-heading {
 		font-size: 4.6rem;
 	}
