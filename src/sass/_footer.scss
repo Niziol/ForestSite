@@ -29,7 +29,9 @@
 	&__map {
 		display: flex;
 
-		&-item {
+		&-category {
+			display: flex;
+			flex-direction: column;
 			padding: 0 1em 1em;
 		}
 
@@ -39,8 +41,26 @@
 		}
 
 		&-text {
+			position: relative;
 			font-size: 1rem;
 			padding: 0.5em 0;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 80%;
+				width: 2px;
+				top: 10%;
+				left: -5px;
+				background-color: color.$second-color;
+				transform: scaleY(0);
+				transition: transform 0.3s;
+			}
+
+			&:hover::before {
+				transform: scaleY(1);
+			}
 		}
 	}
 
@@ -61,9 +81,9 @@
 		}
 
 		&__map {
-			&-item {
+			&-category {
 				padding-right: 3em;
-                padding-bottom: 2em;
+				padding-bottom: 2em;
 			}
 
 			&-title {
@@ -85,14 +105,14 @@
 
 @media (min-width: 768px) {
 	.footer {
-        .wrapper {
-            padding: 6em 5em 2em;
-        }
-    
+		.wrapper {
+			padding: 6em 5em 2em;
+		}
+
 		&__boxes {
 			flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
+			justify-content: space-between;
+			align-items: flex-start;
 		}
 
 		&__brand {
@@ -134,9 +154,9 @@
 		}
 
 		&__map {
-			&-item {
-                padding-right: 4em;
-                padding-bottom: 3em;
+			&-category {
+				padding-right: 4em;
+				padding-bottom: 3em;
 			}
 
 			&-title {

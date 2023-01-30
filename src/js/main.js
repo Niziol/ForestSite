@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.burger-btn');
 const nav = document.querySelector('.nav__items').parentElement;
 const navItems = nav.querySelectorAll('.nav__item');
+const footerYear = document.querySelector('.footer__year');
 
 const showNavigation = () => {
 	nav.classList.toggle('nav-mobile--active');
@@ -20,7 +21,13 @@ function checkPosition() {
 	}
 }
 
+const setYear = () => {
+	const currentYear = new Date().getFullYear();
+	footerYear.textContent = currentYear;
+};
+
 checkPosition();
+setYear();
 
 burgerBtn.addEventListener('click', showNavigation);
 navItems.forEach((navItem) => {
