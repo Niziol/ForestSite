@@ -1,0 +1,66 @@
+@use 'mixins' as mixin;
+@use 'colors' as color;
+
+.contact {
+	position: relative;
+	background-color: color.$light-white;
+	overflow: hidden;
+	font-size: 1.6rem;
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form {
+		&-label {
+			margin-bottom: 0.5em;
+		}
+
+		&-input {
+			@include mixin.contactForm;
+		}
+
+		&-textarea {
+			@include mixin.contactForm;
+			resize: vertical;
+			min-height: 150px;
+		}
+
+		&-btn {
+			align-self: flex-end;
+			padding: 1em;
+			width: 100%;
+			max-width: 300px;
+			font-size: 1.6rem;
+			color: color.$second-color;
+			border: none;
+			border-radius: 8px;
+			box-shadow: 5px 5px 10px color.$grey;
+			background-color: color.$main-color;
+			cursor: pointer;
+			transition: box-shadow 0.5s;
+
+			&:hover {
+				box-shadow: 2px 3px 0 0 rgba(255, 255, 255, 0.8),
+					inset 11px 6px 10px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+	.error {
+		border: 1px solid red;
+	}
+
+	.show-popup {
+		top: 150px;
+	}
+}
+
+.google-map {
+	.map {
+		height: 500px;
+		width: 100%;
+	}
+}

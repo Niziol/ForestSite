@@ -4,13 +4,48 @@
 <head>
     <title>ForestGroup - Atrakcje i wycieczki z zielenią</title>
     <!-- @include metaLink.kit' -->
-    <link rel="stylesheet" href="./dist/css/contact.min.css">
+    <link rel="stylesheet" href="./dist/css/contactPage.min.css">
 </head>
 
 <body>
     <!-- @include 'nav.kit' -->
+
+    <section class="contact section section-padding">
+        <h2 class="section-heading">Kontakt</h2>
+        <p class="section-description">Masz pytania? Napisz do nas!</p>
+
+        <div class="wrapper">
+            <form class="contact__form">
+                <div class="contact__form-top">
+                    <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                    <input type="text" id="name" class="contact__form-input"
+                        placeholder="Wprowadź swoje imię i nazwisko">
+
+                    <label for="email" class="contact__form-label">Adres e-mail:</label>
+                    <input type="text" id="email" class="contact__form-input" placeholder="Wprowadź swój adres email">
+                </div>
+
+                <label for="msg" class="contact__form-label">Wiadomość:</label>
+                <textarea id="msg" class="contact__form-textarea"
+                    placeholder="Wprowadź treść wiadomości (min 10 znaków)"></textarea>
+
+                <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="google-map section section-padding">
+        <h2 class="section-heading">Mapa</h2>
+        <p class="section-description">Zastanawiasz się gdzie nas znaleźć? Spójrz tutaj!</p>
+        <div class="wrapper map"></div>
+    </section>
+
     <!-- @include 'footer.kit' -->
     <!-- @include 'scripts.kit' -->
+    <script src="./dist/js/contact.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCildD4SUx6upwh2i0NFXym9mBtBd70ww&callback=initMap&v=weekly"
+        defer></script>
 </body>
 
 </html>
