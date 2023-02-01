@@ -58,10 +58,8 @@
 						font-size: 1.6rem;
 					}
 
-					&--plus {
-						i {
-							color: color.$highlight-color;
-						}
+					.fa-check {
+						color: color.$highlight-color;
 					}
 				}
 			}
