@@ -79,6 +79,7 @@ function initMap() {
 	const marker = new google.maps.Marker({
 		position: position,
 		map: map,
+		title: "ForestGroup"
 	});
 }
 
