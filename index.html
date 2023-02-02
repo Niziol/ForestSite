@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="./dist/css/style.min.css">
 <script src="https://kit.fontawesome.com/793414b349.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/css/index.min.css">
@@ -37,20 +38,20 @@
         </div>
     </div>
 </nav>
-    <header class="header">
-    <div>
+    <header class="header" data-aos="zoom-in">
+    <div data-aos="fade-in" data-aos-delay="600">
         <h1 class="header__title">Forest Group</h1>
         <p class="header__text">Najpiękniejszy park w Twojej okolicy!</p>
     </div>
 </header>
     <main>
-    <section id="Onas" class="aboutus section-padding">
+    <section id="Onas" class="aboutus section-padding" data-aos="fade-up" data-aos-duration="3000">
     <div class="wrapper">
         <h2 class="section-heading">o nas</h2>
         <div class="aboutus__body">
             <img class="aboutus__body-img" src="./dist/img/waters-3095682_640.jpg"
                 alt="Skalista porośnięta mchem skała na środku jeziora w lesie, na której rośnie kilka młodych drzewek">
-            <div class="aboutus__body-text">
+            <div class="aboutus__body-text" data-aos="flip-up">
                 <h3>Niezapomniane przygody</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eligendi. Perferendis natus
                     inventore aperiam saepe voluptatum obcaecati, consequuntur porro placeat asperiores
@@ -63,15 +64,15 @@
         </div>
     </div>
 </section>
-    <section class="hero-img">
+    <section class="hero-img" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="hero-img__title">Przygoda dla całej rodziny</h2>
 </section>
-    <section id="Oferta" class="offers section-padding">
+    <section id="Oferta" class="offers section-padding" data-aos="fade-up" data-aos-duration="2000">
     <div class="wrapper">
         <h2 class="section-heading">oferta</h2>
         <p class="section-description">Wybierz jedną z naszych wspaniałych ofert!</p>
         <div class="offers__body">
-            <div class="offers__box">
+            <div class="offers__box" data-aos="flip-left" data-aos-delay="1100">
                 <h3 class="offers__box-title">Demo</h3>
                 <p class="offers__box-price-tag"><span>$</span>0</p>
                 <div class="offers__box-options">
@@ -88,7 +89,7 @@
                 </div>
                 <button class="offers__btn">Wybierz</button>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="flip-left" data-aos-delay="1400">
                 <h3 class="offers__box-title">Standard</h3>
                 <p class="offers__box-price-tag"><span>$</span>99</p>
                 <div class="offers__box-options">
@@ -105,7 +106,7 @@
                 </div>
                 <button class="offers__btn offers__btn--second">Wybierz</button>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="flip-left" data-aos-delay="1700">
                 <h3 class="offers__box-title">Premium</h3>
                 <p class="offers__box-price-tag"><span>$</span>299</p>
                 <div class="offers__box-options">
@@ -123,7 +124,10 @@
                 <button class="offers__btn">Wybierz</button>
             </div>
         </div>
-        <a href="./oferta.html" class="offers__btn offers__btn--second offers__offers-page-btn">Więcej ofert</a>
+        <div class="heartbeat" data-aos="fade-up" data-aos-delay="2000">
+            <a type="button" href="./oferta.html" class="offers__btn offers__btn--second offers__offers-page-btn">Więcej
+                ofert</a>
+        </div>
     </div>
 </section>
 </main>
@@ -157,7 +161,9 @@
     <hr>
     <p class="footer__bottom-text">&copy;<span class="footer__year">2021</span> Forest Group Company Ltd. </p>
 </footer>
-    <script src="./dist/js/main.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./dist/js/aos.min.js"></script>
+<script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>

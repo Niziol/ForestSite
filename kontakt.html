@@ -3,7 +3,8 @@
 
 <head>
     <title>Skontaktuj się z nami! - ForestGroup</title>
-    <meta name="description" content="Potrzebujesz szybkiego kontaktu? Wypełnij formularz kontaktowy do ForestGroup, a odpiszemy zanim usłyszysz szelest lasu!">
+    <meta name="description"
+        content="Potrzebujesz szybkiego kontaktu? Wypełnij formularz kontaktowy do ForestGroup, a odpiszemy zanim usłyszysz szelest lasu!">
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="./dist/css/style.min.css">
 <script src="https://kit.fontawesome.com/793414b349.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/css/contactPage.min.css">
@@ -39,33 +41,39 @@
 </nav>
 
     <section class="contact section section-padding">
-        <h2 class="section-heading">Kontakt</h2>
-        <p class="section-description">Masz pytania? Napisz do nas!</p>
-
         <div class="wrapper">
-            <form class="contact__form">
-                <div class="contact__form-top">
-                    <label for="name" class="contact__form-label">Imię i nazwisko:</label>
-                    <input type="text" id="name" class="contact__form-input"
-                        placeholder="Wprowadź swoje imię i nazwisko">
+            <div data-aos="zoom-in-up">
+                <h2 class="section-heading">Kontakt</h2>
+                <p class="section-description">Masz pytania? Napisz do nas!</p>
+            </div>
+            <div data-aos="zoom-in-up" data-aos-delay="800">
+                <form class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input type="text" id="name" class="contact__form-input"
+                            placeholder="Wprowadź swoje imię i nazwisko">
 
-                    <label for="email" class="contact__form-label">Adres e-mail:</label>
-                    <input type="text" id="email" class="contact__form-input" placeholder="Wprowadź swój adres email">
-                </div>
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" id="email" class="contact__form-input"
+                            placeholder="Wprowadź swój adres email">
+                    </div>
 
-                <label for="msg" class="contact__form-label">Wiadomość:</label>
-                <textarea id="msg" class="contact__form-textarea"
-                    placeholder="Wprowadź treść wiadomości (min 10 znaków)"></textarea>
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"
+                        placeholder="Wprowadź treść wiadomości (min 10 znaków)"></textarea>
 
-                <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
-            </form>
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <section class="google-map section section-padding">
-        <h2 class="section-heading">Mapa</h2>
-        <p class="section-description">Zastanawiasz się gdzie nas znaleźć? Spójrz tutaj!</p>
-        <div class="wrapper map"></div>
+        <div class="wrapper" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="section-heading">Mapa</h2>
+            <p class="section-description">Zastanawiasz się gdzie nas znaleźć? Spójrz tutaj!</p>
+            <div class="map"></div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -98,7 +106,9 @@
     <hr>
     <p class="footer__bottom-text">&copy;<span class="footer__year">2021</span> Forest Group Company Ltd. </p>
 </footer>
-    <script src="./dist/js/main.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./dist/js/aos.min.js"></script>
+<script src="./dist/js/main.min.js"></script>
     <script src="./dist/js/contact.min.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCildD4SUx6upwh2i0NFXym9mBtBd70ww&callback=initMap&v=weekly"
