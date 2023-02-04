@@ -84,11 +84,13 @@ textarea {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 414px) {
 	.section-heading {
 		font-size: 4rem;
 	}
+}
 
+@media (min-width: 768px) {
 	.section-padding {
 		padding: 6em 2em;
 	}

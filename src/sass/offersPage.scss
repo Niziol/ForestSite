@@ -6,6 +6,15 @@
 	}
 }
 
+.contact-offert {
+	padding: 10em 0;
+
+	.btn {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
 @media (min-width: 992px) {
 	.offersPage {
 		.offers-desktop {
@@ -99,12 +108,6 @@
 						font-size: 2rem;
 					}
 				}
-			}
-		}
-		.offers {
-			&__btn {
-				padding: 0.5em 2em;
-				font-size: 1.6rem;
 			}
 		}
 	}
