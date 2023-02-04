@@ -66,18 +66,10 @@
 		}
 	}
 
-	.offers {
-		&__btn {
-			position: relative;
-			display: inline-block;
-			left: 50%;
-			transform: translateX(-50%);
-			padding: 0.5em 2em;
-			font-size: 1.4rem;
-			text-align: center;
-			text-decoration: none;
-			color: color.$second-color;
-		}
+	.btn {
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0.5em 2em;
 	}
 }
 
